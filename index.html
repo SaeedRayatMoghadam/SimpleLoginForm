@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="fonts/font-awesome-4.7.0/css/font-awesome.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <header>
+          <img src="images/profile.jpg" alt="profile" class="profile" />
+          <h2 class="title">Saeed-RM</h2>
+        </header>
+
+        <i id="icon-userName" class="fa fa-user icon-user"></i>
+        <input
+          type="text"
+          placeholder="UserName"
+          class="txtUserName"
+          onfocus="userNameFocus()"
+        />
+
+        <i id="icon-password" class="fa fa-lock icon-lock"></i>
+        <input
+          type="text"
+          placeholder="Password"
+          class="txtPassword"
+          onfocus="passwordFocus()"
+        />
+
+        <button class="btn">Login</button>
+        <a class="forgotPass">Forgot Username / Password?</a>
+      </form>
+    </div>
+
+    <script>
+      var iconUserName = document.getElementById("icon-userName");
+      var iconPassworde = document.getElementById("icon-password");
+
+      var userName = document.querySelector(".txtUserName");
+      var password = document.querySelector(".txtPassword");
+
+      function userNameFocus() {
+        iconUserName.style.right = "196px";
+        iconUserName.style.color = "#00c6fb";
+      }
+
+      userName.addEventListener("focusout", function userNameFocusOut() {
+        iconUserName.style.right = "190px";
+        iconUserName.style.color = "#8E8E8E";
+      });
+
+      function passwordFocus() {
+        iconPassworde.style.right = "196px";
+        iconPassworde.style.color = "#00c6fb";
+      }
+
+      password.addEventListener("focusout", function userNameFocusOut() {
+        iconPassworde.style.right = "190px";
+        iconPassworde.style.color = "#8E8E8E";
+      });
+    </script>
+  </body>
+</html>
